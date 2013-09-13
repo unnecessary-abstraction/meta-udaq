@@ -19,6 +19,3 @@ RDEPENDS_kitchen-sink = " \
 	htop iftop iotop \
 	iputils \
 	"
-
-# Ensure the images we care about are built
-DEPENDS_kitchen-sink = "core-image-minimal"
