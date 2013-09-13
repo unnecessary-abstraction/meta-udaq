@@ -1,0 +1,32 @@
+From a5e989e5ae7ba42132667d982b042bf7221f0938 Mon Sep 17 00:00:00 2001
+From: Paul Barker <paul@paulbarker.me.uk>
+Date: Tue, 11 Jun 2013 11:19:12 +0100
+Subject: [PATCH] udaq: Updated platform muxing to expose the required signals
+
+Signed-off-by: Paul Barker <paul@paulbarker.me.uk>
+---
+ arch/arm/mach-omap2/board-omap3beagle.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/arch/arm/mach-omap2/board-omap3beagle.c b/arch/arm/mach-omap2/board-omap3beagle.c
+index 4a71cb7..afbb068 100644
+--- a/arch/arm/mach-omap2/board-omap3beagle.c
++++ b/arch/arm/mach-omap2/board-omap3beagle.c
+@@ -470,6 +470,14 @@ static const struct usbhs_omap_board_data usbhs_bdata __initconst = {
+ 
+ #ifdef CONFIG_OMAP_MUX
+ static struct omap_board_mux board_mux[] __initdata = {
++	OMAP3_MUX(SDMMC2_DAT6, OMAP_MUX_MODE4 | OMAP_PIN_OUTPUT),
++	OMAP3_MUX(SDMMC2_DAT7, OMAP_MUX_MODE4 | OMAP_PIN_OUTPUT),
++	OMAP3_MUX(MCBSP1_CLKX, OMAP_MUX_MODE0 | OMAP_PIN_OUTPUT),
++	OMAP3_MUX(MCBSP1_CLKR, OMAP_MUX_MODE0 | OMAP_PIN_OUTPUT),
++	OMAP3_MUX(MCBSP1_FSX, OMAP_MUX_MODE0 | OMAP_PIN_INPUT),
++	OMAP3_MUX(MCBSP1_FSR, OMAP_MUX_MODE0 | OMAP_PIN_INPUT),
++	OMAP3_MUX(MCBSP1_DX, OMAP_MUX_MODE0 | OMAP_PIN_OUTPUT),
++	OMAP3_MUX(MCBSP1_DR, OMAP_MUX_MODE0 | OMAP_PIN_INPUT),
+ 	{ .reg_offset = OMAP_MUX_TERMINATOR },
+ };
+ #endif
+-- 
+1.8.3.2
+
