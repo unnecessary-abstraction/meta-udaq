@@ -2,7 +2,7 @@ SUMMARY = "TUNA: Toolkit for Underwater Noise Analysis"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=65dd37ccb3e888dc57e47d925b80b38a"
 
-DEPENDS = "alsa-lib libsndfile1 libconfig fftw"
+DEPENDS = "alsa-lib libsndfile1 fftw"
 
 # We're building input_ads1672 which is specific to the UDAQ platform
 DEPENDS += "ads1672"
