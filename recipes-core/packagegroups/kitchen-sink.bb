@@ -8,6 +8,7 @@ inherit packagegroup
 # be installed by default but should be available to download.
 RDEPENDS_kitchen-sink = " \
 	packagegroup-core-ssh-dropbear packagegroup-core-ssh-openssh \
+	packagegroup-basic \
 	nano emacs vim \
 	vsftpd \
 	wget curl \
