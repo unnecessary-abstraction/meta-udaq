@@ -19,4 +19,5 @@ RDEPENDS_kitchen-sink = " \
 	man man-pages texinfo \
 	htop iftop iotop \
 	iputils \
+	valgrind perl \
 	"
